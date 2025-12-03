@@ -3,10 +3,19 @@
 let age; //declaration
 age = 20; //assignment
 
-const Name = "Nady"; //INITIALIZATION is declaration and assignment at the same time
+const Name = "Nady"; 
+//INITIALIZATION is declaration and assignment at the same time
 
 console.log("i am " + age + " years old.");
-//CONCATENATION is using the + operator to combine strings and variables together.
+//CONCATENATION is using the + operator to combine/join strings and variables together.
 
-age = age + 10; //REASSIGNMENT is updating the variable age by adding 10 to its current value
+//age = age + 10; 
+age += 10; //shorthand for the same operation
+//REASSIGNMENT is updating the variable age by adding 10 to its current value
 console.log("in 10 years, I will be " + age + " years old");
+
+let sistersAge = `my sister who is one year older than me will be ${age + 1} years old`;
+console.log(sistersAge);
+//STRING INTERPOLATION is embedding variables or expressions directly inside a string, replacing placeholders with their values.
+//The backticks (`...`)  create a TEMPLATE LITERAL (a special kind of string in JavaScript).
+//Inside the template literal, anything wrapped in ${...} is evaluated as JavaScript code before being inserted into the string.
