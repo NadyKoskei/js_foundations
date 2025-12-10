@@ -19,3 +19,14 @@ console.log(sistersAge);
 //STRING INTERPOLATION is embedding variables or expressions directly inside a string, replacing placeholders with their values.
 //The backticks (`...`)  create a TEMPLATE LITERAL (a special kind of string in JavaScript).
 //Inside the template literal, anything wrapped in ${...} is evaluated as JavaScript code before being inserted into the string.
+//In this case, ${age + 1} calculates the sister's age by adding 1 to the current value of age.
+
+
+//STRING METHODS are built-in functions that allow you to manipulate and work with string data more easily.
+let str = "  JavaScript is fun!  ";
+
+console.log(str.trim());              // "JavaScript is fun!" 
+console.log(str.toUpperCase());       // "  JAVASCRIPT IS FUN!  "
+console.log(str.includes("fun"));     // true
+console.log(str.slice(2, 12));        // "JavaScript"
+console.log(str.replace("fun", "cool")); // "  JavaScript is cool!  "
