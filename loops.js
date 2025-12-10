@@ -26,7 +26,7 @@ while (j < 5) { // condition
   // code block
 //} while (condition);
 
-let k = 0; // initialization
+let k = 8; // initialization
 do {
     console.log("Do-While Loop iteration:", k);
     k++; // increment

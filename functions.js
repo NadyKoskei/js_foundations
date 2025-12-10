@@ -35,3 +35,36 @@ console.log("Product:", product); // Output the product
 const square = n => n * n; // Single parameter 'n', returns its square
 let squaredValue = square(7); // Calling the 'square' function with argument 7
 console.log("Squared Value:", squaredValue); // Output the squared value    
+
+// DEFAULT PARAMETERS allow you to set default values for function parameters.
+function greetWithDefault(name = "Guest") {
+    // If no argument is provided, 'name' will default to "Guest"
+    console.log("Welcome, " + name + "!");
+}
+
+greetWithDefault(); // Calls the function without an argument, uses default
+greetWithDefault("Alice"); // Calls the function with an argument
+
+// RETURN STATEMENT is used to specify the value that a function should output when it is called.
+function subtract(a, b) {
+    return a - b; // The function returns the difference between 'a' and 'b'
+}
+
+let difference = subtract(10, 4); // Calling the 'subtract' function with arguments 10 and 4
+console.log("Difference:", difference); // Output the difference
+
+// FUNCTION SCOPE refers to the visibility and lifetime of variables defined within a function.
+function scopeExample() {
+    let localVar = "I am local"; // 'localVar' is scoped to this function
+    console.log(localVar); // Accessible here
+}
+scopeExample();
+// console.log(localVar); // gives an error because localVar is not defined outside the function
+
+// HIGHER-ORDER FUNCTIONS are functions that can take other functions as arguments or return functions as their result.
+function higherOrderExample(callback) {
+    // 'callback' is a function passed as an argument
+    console.log("Before callback");
+    callback(); // Calling the callback function
+    console.log("After callback");
+}

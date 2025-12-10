@@ -23,6 +23,8 @@ let address;
 let phoneNumber = null; 
 // null - represents the intentional absence of any object value
 
+//NaN is a special value in JavaScript (and many other programming languages) that represents the result of an invalid or undefined numeric operation. Hence NaN is of the type number.
+
 //PRIMITIVE are indivisible — you can’t break them down further in the language, hold single, simple values.
 
 
@@ -36,3 +38,12 @@ console.log("Your hobies: " + hobbies)
 // + operator is used to concatenate (join) strings and variables together
 
 // you can check the data type of a variable using the typeof operator
+
+
+//TYPE COERCION is when a programming language automatically converts one data type into another during code execution to complete an operation. This usually happens in dynamically typed languages like JavaScript, where values are implicitly changed to match the context of an operation.
+
+//- Implicit (automatic) coercion: Done automatically by the language. Example: "5" * 2 → 10 (string "5" is coerced into a number).
+//- Explicit coercion: Done intentionally by the programmer using functions or operators. Example: Number("5") → 5.
+
+
+
