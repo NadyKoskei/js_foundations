@@ -78,12 +78,12 @@ console.log(0 || "" || null || "false"); //returns "false" because it is the fir
 
 //homework with logical operators
 let age =10;
-console.log(age >= 18 && age <= 35);
-console.log(age < 20 || age > 60);
-console.log(age < 18 && "you are a child");
-console.log(age >= 18 && "you are an adult");
-console.log(age >= 18 && age <= 35 && "you are among the youth");
-console.log((age >= 18 && age <= 35) || "you are not a youth");
+console.log(age >= 18 && age <= 35); //returns false, age>=18 because it is the first falsely value to be encountered
+console.log(age < 20 || age > 60); //returns true,age<20 because it is the first truthy value to be encountered
+console.log(age < 18 && "you are a child"); //returns "you are a child" because it is the last truthy value to be encountered
+console.log(age >= 18 && "you are an adult"); //returns false,age>=18 because it is the first falsely value to be encountered
+console.log(age >= 18 && age <= 35 && "you are among the youth"); //returns false, age>=18 because it is the first falsely value to be encountered
+console.log((age >= 18 && age <= 35) || "you are not a youth"); //returns "you are not a youth" because it is the first truthy value to be encountered
 
 //STRING OPERATORS are used to perform operations on (texts) string values.
 

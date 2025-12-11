@@ -1,7 +1,12 @@
 // FUNCTIONS are reusable blocks of code that perform a specific task.
+// BLOCK OF CODE is a group of statements that are treated as a single unit.
+// In most programming languages, blocks are enclosed in curly braces { } or indentation.
+// They define the scope of execution — for example, inside functions, loops, or conditionals.
 // They help organize code, make it more readable, and allow for code reuse without duplication.
+// REUSABILITY means that once a function is defined, it can be used multiple times throughout the code without needing to rewrite it each time.
 
-// Function DECLARATION is the standard way to define a function.
+// Function DECLARATION is the standard way to DEFINE a function. 
+// NB code  inside a function willl not be executed untill it is called.
 // It starts with the 'function' keyword, followed by the function name, parentheses for parameters, and curly braces for the function body.
 function greet(name) {
     // 'name' is a parameter that acts as a placeholder for the argument passed to the function
@@ -14,6 +19,21 @@ function greet(name) {
 greet("Nady"); // Here, "Nady" is the argument passed to the 'greet' function
 
 
+callme(); //calling the function before its declaration due to hoisting
+
+// HOISTING is a JavaScript mechanism where function declarations are moved to the top of their containing scope during the compilation phase.
+//its like declarations are read first before any code is executed.
+// This means you can call functions before they are defined in the code.
+
+function callme() {
+    console.log("I am called before my declaration because of hoisting");
+}
+
+//IIFE is a function that runs immediately after it’s defined. Immediately Invoked Function Expression
+// It’s wrapped in parentheses to make it an expression, then followed by () to execute.
+(function() {
+  console.log("I run instantly!");
+})();
 
 // Function EXPRESSION is another way to define a function, where the function is assigned to a variable.
 const add = function(a, b) {
@@ -68,3 +88,6 @@ function higherOrderExample(callback) {
     callback(); // Calling the callback function
     console.log("After callback");
 }
+
+//CALLBACK FUNCTION is a function passed into another function as an argument to be executed later.
+
