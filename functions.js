@@ -81,13 +81,21 @@ function scopeExample() {
 scopeExample();
 // console.log(localVar); // gives an error because localVar is not defined outside the function
 
+//CALLBACK FUNCTION is a function passed into another function as an argument to be executed later.
+function myCallback() {
+    console.log("I am a callback function!");
+}
+
+
 // HIGHER-ORDER FUNCTIONS are functions that can take other functions as arguments or return functions as their result.
-function higherOrderExample(callback) {
-    // 'callback' is a function passed as an argument
+function higherOrderExample(myCallback) {
+    // 'myCallback' is a function passed as an argument
     console.log("Before callback");
-    callback(); // Calling the callback function
+    myCallback(); // Calling the callback function
     console.log("After callback");
 }
 
-//CALLBACK FUNCTION is a function passed into another function as an argument to be executed later.
+higherOrderExample(myCallback); // Passing 'myCallback' as an argument
+
+// RECURSION is a programming technique where a function calls itself to solve a problem.
 
