@@ -35,3 +35,10 @@ function area(height, width){
 //console.log("Area of rectangle:", areaResult); //output the result
 
 console.log(area(8, 21)); //directly calling the area function inside console.log
+
+//5.writting a function that converts Celsius to Fahrenheit and returns the converted temperature.
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9/5) + 32 + "°F is the temperature in Fahrenheit for " + celsius + "°C.";
+}
+console.log(celsiusToFahrenheit(25)); //calling the function with 25 as argument
+
