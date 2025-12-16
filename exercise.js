@@ -42,3 +42,22 @@ function celsiusToFahrenheit(celsius) {
 }
 console.log(celsiusToFahrenheit(25)); //calling the function with 25 as argument
 
+//6.writing a fizz buzz function
+function fizzBuzz(n) {
+    if(n % 3 === 0 && n % 5 === 0){
+        return "fizzbuzz";
+    }
+    else if(n % 5 === 0){
+        return "buzz";
+    }
+    else if(n % 3 === 0){
+        return "fizz";
+    }
+    else {
+        return n;
+    }
+}
+console.log(fizzBuzz(9)); //should return "fizz"
+console.log(fizzBuzz(10)); //should return "buzz"
+console.log(fizzBuzz(15)); //should return "fizzbuzz"
+console.log(fizzBuzz(7)); //should return 7
