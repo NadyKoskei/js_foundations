@@ -78,7 +78,7 @@ function isLeapYear(year) {
   } //a leap year is divisible by 4 but not by 100, unless it is also divisible by 400.
   else {
     return year + " is not a leap year.";
-  }     
+  }
 }
 console.log(isLeapYear(2020)); //should return "2020 is a leap year."
 console.log(isLeapYear(1900)); //should return "1900 is not a leap year."

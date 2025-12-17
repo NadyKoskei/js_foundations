@@ -8,11 +8,16 @@
 // Function DECLARATION is the standard way to DEFINE a function. 
 // NB code  inside a function willl not be executed untill it is called.
 // It starts with the 'function' keyword, followed by the function name, parentheses for parameters, and curly braces for the function body.
+
+// RETURN STATEMENT is used to specify the value that a function should output when it is called , allows us to store the output in a variable or use it in expressions.
+//Inside a function, return sends a value back to the place where the function was called.
+//note that return does not print to the console directly. You need to use console.log to see the output.
+
 function greet(name) {
     // 'name' is a parameter that acts as a placeholder for the argument passed to the function
     //PARAMETERS are variables listed as part of the function definition.
-    // Inside the function, we use the 'name' parameter to customize the greeting message
-    //ARGUMENTS are the actual values you pass to the function when you call it.
+    // Inside the function, we use the 'name' parameter to CUSTOMIZE the greeting message
+    //ARGUMENTS are the actual values you pass to the function when you call it. they are assigned to the corresponding parameters in order.
     console.log("Hello, " + name + "!");
 }
 // Function CALLING/INVOKING is how you execute a function to perform its task.
@@ -43,6 +48,11 @@ const add = function(a, b) {
 let result = add(5, 3); // Calling the 'add' function with arguments 5 and 3
 console.log("Sum:", result); // Output the result
 
+//NB there is a difference between expression and calling a function as part of value assignment to a variable.
+// In a function expression, the function is defined and assigned to a variable, but it is not executed until you call it using parentheses () with arguments.
+//in line 48, the variable result stores the output of calling the add function with 5 and 3 as arguments.
+//in line 44, the variable add holds the function itself, not the result of calling it.
+
 // ARROW FUNCTION is a more concise syntax for writing functions, introduced in ES6.
 const multiply = (x, y) => {
     // 'x' and 'y' are parameters for the arrow function
@@ -65,7 +75,7 @@ function greetWithDefault(name = "Guest") {
 greetWithDefault(); // Calls the function without an argument, uses default
 greetWithDefault("Alice"); // Calls the function with an argument
 
-// RETURN STATEMENT is used to specify the value that a function should output when it is called.
+
 function subtract(a, b) {
     return a - b; // The function returns the difference between 'a' and 'b'
 }
