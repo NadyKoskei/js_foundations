@@ -36,8 +36,15 @@ function callme() {
 
 //IIFE is a function that runs immediately after it’s defined. Immediately Invoked Function Expression
 // It’s wrapped in parentheses to make it an expression, then followed by () to execute.
+
 (function() {
   console.log("I run instantly!");
+})();
+
+//ANONYMOUS functions are functions without a name, often used in IIFEs or as arguments to other functions.
+// They are useful for short-lived tasks where naming the function is unnecessary.
+(function() {
+  console.log("I am an anonymous function!");
 })();
 
 // Function EXPRESSION is another way to define a function, where the function is assigned to a variable.
@@ -52,6 +59,11 @@ console.log("Sum:", result); // Output the result
 // In a function expression, the function is defined and assigned to a variable, but it is not executed until you call it using parentheses () with arguments.
 //in line 48, the variable result stores the output of calling the add function with 5 and 3 as arguments.
 //in line 44, the variable add holds the function itself, not the result of calling it.
+
+const num2 = function(d,e){
+    return d+e
+};
+//both arrow and expression functions cannot be called before they are defined due to lack of hoisting. They behave like variables.
 
 // ARROW FUNCTION is a more concise syntax for writing functions, introduced in ES6.
 const multiply = (x, y) => {
@@ -95,7 +107,6 @@ scopeExample();
 function myCallback() {
     console.log("I am a callback function!");
 }
-
 
 // HIGHER-ORDER FUNCTIONS are functions that can take other functions as arguments or return functions as their result.
 function higherOrderExample(myCallback) {

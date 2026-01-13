@@ -33,7 +33,7 @@ x /= 2; // x = 50
 x *= 5; // x = -25
 x += 26; // x = 1
 
-//COMPARISON OPERATORS are used to compare two values and return a boolean result (true or false).
+//COMPARISON OPERATORS are used to compare two values and return a boolean result (true or false) and are also called RELATIONAL OPERATORS.
 let e = 20;
 let f = 30;
 
@@ -53,9 +53,9 @@ console.log("e <= f:", e <= f);       // Less than or equal to
 
 //LOGICAL OPERATORS are used to combine multiple boolean expressions and return a boolean result. are used to combine or invert conditions. They’re especially handy when working with if statements, loops, or any situation where you need to evaluate multiple conditions at once.
 
-//- &&, double amperstand → returns the first falsy value, or the last truthy if none are falsy, all are truthy.
-//- ||, double pipe → returns the first truthy value, or the last falsy if none are truthy, all are falsy.
-//- !, esclamation mark  → negates a boolean value (true becomes false, false becomes true) converts a value into its boolean opposite.
+// AND &&, double amperstand → returns the first falsy value, or the last truthy if none are falsy, all are truthy.
+// OR ||, double pipe → returns the first truthy value, or the last falsy if none are truthy, all are falsy.
+// NOT !, esclamation mark  → negates a boolean value (true becomes false, false becomes true) converts a value into its boolean opposite.
 
 //FALSEY values in js include: false, 0 and -0 and 0n (BigInt zero), "" empty string, null, undefined, and NaN. All other values are considered TRUTHY.
 

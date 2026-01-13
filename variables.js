@@ -1,6 +1,6 @@
 //VARIABLES are used to store data values that can be referenced and manipulated in a program.
 
-let age; //declaration
+let age; //DECLARATION ..the key word and the name of the variable 
 age = 20; //assignment
 
 const Name = "Nady"; 
