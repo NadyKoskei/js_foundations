@@ -49,27 +49,12 @@ if (age4 >= 3 && age4 <= 9) {
   console.log("you are not in 8-4-4 system");
 }
 
-//nested if statements
-let age6 = 20;
+//NESTED IF statements is an if statement inside another if statement. It allows for more complex decision-making by checking additional conditions within the block of a previous if statement.
 
-if (age6 >= 3 && age6 <= 23)
-  {
-    if (age6 <= 9) {
-      console.log("you are in lower primary");
-    } else if (age6 <= 13) {
-      console.log("you are in upper primary");
-    } else if (age6 <= 18) {
-      console.log("you are in secondary school");
-    } else if (age6 <= 23) {
-      console.log("you are in university");
-    }
-  }
-   else {
-    console.log("you are not in 8-4-4 system");
-  }
 
 //SWITCH statement is used to perform different actions based on different conditions. It’s often cleaner than multiple if-else statements when checking the same variable against many values.
 //CASE is each possible value that the switch statement checks against.
+//when a case matches the switch expression, the code block associated with that case is executed.
 //BREAK is used to exit the switch statement once a matching case is found and executed.
 //DEFAULT case is executed if none of the other cases match.
 
