@@ -82,3 +82,56 @@ function isLeapYear(year) {
 }
 console.log(isLeapYear(2020)); //should return "2020 is a leap year."
 console.log(isLeapYear(1900)); //should return "1900 is not a leap year."
+
+//8."Write a JavaScript program that takes an array of student scores and prints out whether each student has passed or failed. A student passes if their score is 50 or above. At the end, also print the total number of students who passed and failed."
+//this uses an array and a for loop to iterate through the array elements.  then an if-else statement is used to check if each score is 50 or above to determine pass or fail.
+
+let studentscore = [58, 77, 43, 85, 47, 62, 79, 81, 48, 60];
+let passed = 0;
+let failed = 0;
+
+for (let i = 0; i < studentscore.length; i++) //keeps looping until i reaches the length of the array
+ {
+  if (studentscore[i] >= 50) {
+    console.log("Student with score " + studentscore[i] + " has passed.");
+    passed++;
+  }
+  else {
+    console.log("Student with score " + studentscore[i] + " has failed.");
+    failed++;
+  }
+}
+console.log("Total students passed: " + passed);
+console.log("Total students failed: " + failed);
+
+//9. "Create a JavaScript program that takes an object representing a shopping cart (with items and their quantities). Loop through the cart and check: if the quantity of any item is greater than 0, print the item name and quantity. If the quantity is 0, print that the item is out of stock."
+
+let shoppingcart = {
+  pens : 4, pencils : 0, notebooks : 2, erasers : 0, markers : 5
+}
+
+for (let item in shoppingcart) //let item in shoppingcart  iterates over each key in the shoppingcart object. In this case, item will take the values "pens", "pencils", "notebooks", "erasers", and "markers" in each iteration.
+  {
+  if (shoppingcart[item] > 0) {
+    console.log(item + ": " + shoppingcart[item]);
+  } else {
+    console.log(item + ": Out of stock");
+  } 
+}
+
+//10. "Write a JavaScript program that takes an array of prices and prints out the highest and lowest prices."
+
+let prices = [340, 520, 85, 117, 45, 754, 500];
+let highestPrice = prices[0]; //initialize highestPrice with the first element of the array
+let lowestPrice = prices[0]; //initialize lowestPrice with the first element of the array
+for (let i = 1; i < prices.length; i++) //start from index 1 because I already used index 0 to initialize
+   {
+  if (prices[i] > highestPrice) {
+    highestPrice = prices[i];
+  } //this checks if the current price is greater than the highestPrice found so far. If it is, it updates highestPrice to the current price.
+  if (prices[i] < lowestPrice) {
+    lowestPrice = prices[i];
+  }//this checks if the current price is less than the lowestPrice found so far. If it is, it updates lowestPrice to the current price.
+}
+console.log("Highest price: " + highestPrice);
+console.log("Lowest price: " + lowestPrice);  
