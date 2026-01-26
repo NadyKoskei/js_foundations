@@ -36,6 +36,27 @@ do {
     k++; // increment
 } while (k < 5); 
 
-//FOR...OF LOOP is used to iterate over iterable objects like arrays, strings, etc.
+//FOR...OF LOOP is used to iterate over values in an iterable object like an array or a string, sets and maps.
+//
+
+let colors = ["red", "green", "blue"]; //an array of colors
+for (let color of colors) {
+    console.log("Color:", color);
+}   
+
+  
+
 
 //FOR ...IN LOOP is used to iterate over the enumerable properties of an object.
+//also iterates over keys(indexes or property names) in arrays and strings, but is mainly used for objects.
+
+let car = { brand: "Mazda", model: "MX-5 Miata", year: 2025 }; //an object with properties
+for (let key in car) {
+    console.log(key + ": " + car[key]);
+}
+//- for...in loop → This type of loop is designed to go through all the keys (property names) of an object.
+// key → A variable that will hold each property name of the object ("brand", "model", "year") one by one as the loop runs.
+//in car → Tells JavaScript: “Look inside the car object and give me its keys.”
+//key represents each property name in the car object, and car[key] accesses the corresponding value of that property.
+
+//FOR EACH LOOP is an array method that executes a provided function once for each array element.
