@@ -135,3 +135,52 @@ for (let i = 1; i < prices.length; i++) //start from index 1 because I already u
 }
 console.log("Highest price: " + highestPrice);
 console.log("Lowest price: " + lowestPrice);  
+
+//11. write a js program that prints the name and price of the most expensive and cheapest item 
+
+let products = {
+  phonecase: 250,
+  waterbottle: 700,
+  lemontea: 150,
+  notebook: 420,
+  shoes: 1170,
+  giftbag:50
+}
+
+let mostexpprod = products.phonecase;
+let cheapestprod = products.phonecase;
+
+for (let item in products) {
+  if (products[item] > mostexpprod) {
+    mostexpprod = products[item];
+  }
+  if (products[item] < cheapestprod) {
+    cheapestprod = products[item];
+  }
+}
+console.log("Most expensive product price: " + mostexpprod);
+console.log("Cheapest product price: " + cheapestprod);
+
+//nb this only prints the prices of the most expensive and cheapest products, not their names. To get the names, we need to loop through the object again to find which items match these prices.
+for (let item in products) {
+  if (products[item] === mostexpprod) {
+    console.log("Most expensive product: " + item); 
+  }
+  if (products[item] === cheapestprod) {
+    console.log("Cheapest product: " + item);
+  }
+}
+
+//- for...in loop → This type of loop is designed to go through all the keys (property names) of an object.
+
+
+//to return both name and price in one loop
+
+for (let item in products) {
+  if (products[item] === mostexpprod) {
+    console.log("Most expensive product: " + item + " with price " + products[item]); 
+  }
+  if (products[item] === cheapestprod) {
+    console.log("Cheapest product: " + item + " with price " + products[item]);
+  }
+}
