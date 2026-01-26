@@ -1,15 +1,19 @@
-//ARRAYS are used to store multiple values in a single variable.
-// They help organize data and make it easier to manage collections of related items.
+//ARRAY is a group of similar types of data stored together in a single variable.
+//are used to store multiple values in a single variable.
+// They help organize data and make it easier to manage (perform certaion actions on) collections of related items.
 //you use square brackets [] to define an array, and elements are separated by commas.
 
 let fruits = ["apple", "banana", "cherry"];
+//you access the array by its name 'fruits'
 console.log("Fruits array:", fruits);
 
-// Accessing elements in an array using their index (starting from 0)
-//INDEX is the position of an element in the array and it starts from 0 for the first element.
+// accessing elements in an array using their index (starting from 0) ie 'fruits[0]' accesses the first element "apple"
+//javaScript arrays are ZERO-INDEXED, meaning the first element is at index 0, the second at index 1, and so on.
+//INDEX is the position of an element in the array.
 console.log("First fruit:", fruits[0]);
 console.log("Second fruit:", fruits[1]);
 console.log("Third fruit:", fruits[2]);
+
 
 // LENGTH property returns the number of elements in an array. this is not a method, so it does not require parentheses.
 console.log("Number of fruits:", fruits.length);
