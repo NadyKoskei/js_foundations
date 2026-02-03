@@ -127,3 +127,10 @@ let gift = gender === "male" ? "socks"
          : "no idea";
 
 console.log(gift);
+
+// ACCESSOR OPERATORS are used to access properties and methods of objects and elements of arrays.They include:
+
+// [] BRACKET NOTATION is used to access properties of objects and elements of arrays using a variable or expression inside the brackets.
+
+
+// . DOT OPERATOR is used to access properties and methods of objects in JavaScript. It specifies that we are accessing a property or method that belongs to the object before the dot.

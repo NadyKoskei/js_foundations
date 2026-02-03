@@ -1,5 +1,11 @@
 //VARIABLES are used to store data values that can be referenced and manipulated in a program.
 
+//const is used to declare variables that cannot be reassigned, while let is used for variables that can be reassigned later.
+
+//var is an older way to declare variables and is generally avoided in modern JavaScript due to its function scope and hoisting behavior.
+
+//let is used to declare variables that can be reassigned later.
+
 let age; //DECLARATION ..the key word and the name of the variable 
 age = 20; //assignment
 

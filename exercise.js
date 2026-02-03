@@ -124,7 +124,8 @@ for (let item in shoppingcart) //let item in shoppingcart  iterates over each ke
 let prices = [340, 520, 85, 117, 45, 754, 500];
 let highestPrice = prices[0]; //initialize highestPrice with the first element of the array
 let lowestPrice = prices[0]; //initialize lowestPrice with the first element of the array
-for (let i = 1; i < prices.length; i++) //start from index 1 because I already used index 0 to initialize
+
+for (let i = 1; i < prices.length; i++) //start from index 1 because I already used index 0 to initialize. The prices.length property gives the total number of elements in the prices array, so the loop continues until i is less than that length.
    {
   if (prices[i] > highestPrice) {
     highestPrice = prices[i];
@@ -136,7 +137,32 @@ for (let i = 1; i < prices.length; i++) //start from index 1 because I already u
 console.log("Highest price: " + highestPrice);
 console.log("Lowest price: " + lowestPrice);  
 
-//11. write a js program that prints the name and price of the most expensive and cheapest item 
+// 11. using bubble sort to find highest and lowest prices
+
+let n = prices.length;
+
+// Bubble Sort (descending order)
+for (let i = 0; i < n - 1; i++)  //the first loop runs from 0 to n-1, where n is the length of the prices array. This loop represents the number of passes needed to sort the array.
+  {
+  for (let j = 0; j < n - i - 1; j++) //the second loop runs from 0 to n-i-1. This loop compares adjacent elements in the array and swaps them if they are in the wrong order (i.e., if the current element is less than the next element for descending order).
+     {
+    if (prices[j] < prices[j + 1]) //this condition checks if the current element (prices[j]) is less than the next element (prices[j + 1]). If true, it means they are in the wrong order for descending sort, so they need to be swapped.
+      {
+      let temp = prices[j];
+      prices[j] = prices[j + 1];
+      prices[j + 1] = temp;
+    }
+  }
+}
+
+// Print results
+console.log("Sorted prices (highest to lowest):", prices.join(" "));
+console.log("Most expensive:", prices[0]);
+console.log("Least expensive:", prices[prices.length - 1]);
+
+
+
+//12. write a js program that prints the name and price of the most expensive and cheapest item 
 
 let products = {
   phonecase: 250,

@@ -1,3 +1,5 @@
+//generally, everything in JavaScript is an OBJECT, which is a collection of properties and methods that represent real-world entities or concepts. Objects can be created using object literals, constructor functions, or classes, and they allow us to organize and structure our code in a more modular and reusable way.
+
 //OBJECTS are used to store related data and functionality together in a structured way.
 // They consist of key-value pairs, where KEYs are strings (or Symbols) and values can be any data type, including other objects or functions.
 //PROPERTY is a key-value pair in an object. The key is the name of the property, and the value is the data associated with that key.

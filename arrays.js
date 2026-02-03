@@ -15,7 +15,9 @@ console.log("Second fruit:", fruits[1]);
 console.log("Third fruit:", fruits[2]);
 
 
+
 // LENGTH property returns the number of elements in an array. this is not a method, so it does not require parentheses.
+
 console.log("Number of fruits:", fruits.length);
 
 //ARRAY METHODS allow you to manipulate and interact with arrays in various ways.
@@ -67,3 +69,20 @@ console.log("Original fruits after slice:", fruits);
 // INDEXOF method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 let index = fruits.indexOf("cherry");
 console.log("Index of cherry:", index);
+
+// SORT method sorts the elements of an array in place and returns the sorted array. Is a mutating method because it changes the original array.
+
+
+let prices = [340, 520, 85, 117, 45, 754, 500]; // Original array
+// Sort from highest to lowest by using a custom compare function ((a, b) => b - a) 
+
+prices.sort((a, b) => b - a);
+console.log("Sorted prices (highest to lowest):", prices);
+// Get the most expensive (first element after sorting)
+let mostExpensive = prices[0];
+// Get the least expensive (last element after sorting)
+let leastExpensive = prices[prices.length - 1];
+
+console.log("Most expensive price:", mostExpensive);
+console.log("Least expensive price:", leastExpensive);
+
