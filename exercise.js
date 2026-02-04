@@ -146,9 +146,9 @@ for (let i = 0; i < n - 1; i++)  //the first loop runs from 0 to n-1, where n is
   {
   for (let j = 0; j < n - i - 1; j++) //the second loop runs from 0 to n-i-1. This loop compares adjacent elements in the array and swaps them if they are in the wrong order (i.e., if the current element is less than the next element for descending order).
      {
-    if (prices[j] < prices[j + 1]) //this condition checks if the current element (prices[j]) is less than the next element (prices[j + 1]). If true, it means they are in the wrong order for descending sort, so they need to be swapped.
+    if (prices[j] < prices[j + 1]) //this condition checks if the current element (prices[j]) is less than the next element (prices[j + 1]). If true, it means they are in the wrong order for descending sort, so they need to be swapped. This wil repeat untill the condition is false then 
       {
-      let temp = prices[j];
+      let temp = prices[j]; //the temporary variable is used to hold the value of prices[j] during the swap
       prices[j] = prices[j + 1];
       prices[j + 1] = temp;
     }
@@ -160,6 +160,7 @@ console.log("Sorted prices (highest to lowest):", prices.join(" "));
 console.log("Most expensive:", prices[0]);
 console.log("Least expensive:", prices[prices.length - 1]);
 
+//bubble sort (descending order)
 
 
 //12. write a js program that prints the name and price of the most expensive and cheapest item 
@@ -210,3 +211,10 @@ for (let item in products) {
     console.log("Cheapest product: " + item + " with price " + products[item]);
   }
 }
+
+//13. given an array of prices x, and a range from y to z, find the prices that fall within that specified range.
+
+let x = [800, 400, 1250, 900, 75, 620,340];
+let y;
+let z;
+
