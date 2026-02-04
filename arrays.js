@@ -72,7 +72,6 @@ console.log("Index of cherry:", index);
 
 // SORT method sorts the elements of an array in place and returns the sorted array. Is a mutating method because it changes the original array.
 
-
 let prices = [340, 520, 85, 117, 45, 754, 500]; // Original array
 // Sort from highest to lowest by using a custom compare function ((a, b) => b - a) 
 
@@ -85,4 +84,11 @@ let leastExpensive = prices[prices.length - 1];
 
 console.log("Most expensive price:", mostExpensive);
 console.log("Least expensive price:", leastExpensive);
+
+//SEARCHING AN ARRAY
+
+// includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+
+
+
 
