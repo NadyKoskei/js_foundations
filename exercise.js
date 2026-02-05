@@ -214,7 +214,38 @@ console.log(
 
 //12. write a js program that prints the name and price of the most expensive and cheapest item
 
+function findMostAndLeastExpensive(obj) {
+  // Initializing with the first product
+  let keys = Object.keys(obj);
+  let mostExp = { name: keys[0], price: obj[keys[0]] };
+  let leastExp = { name: keys[0], price: obj[keys[0]] };
 
+  // Loop through all products
+  for (let item in obj) {
+    if (obj[item] > mostExp.price) {
+      mostExp = { name: item, price: obj[item] };
+    }
+    if (obj[item] < leastExp.price) {
+      leastExp = { name: item, price: obj[item] };
+    }
+  }
+  // Return both results
+  return { mostExp, leastExp };
+}
+
+let products = {
+  phonecase: 250,
+  waterbottle: 700,
+  lemontea: 150,
+  notebook: 420,
+  shoes: 1170,
+  giftbag: 50,
+};
+
+let outcome = findMostAndLeastExpensive(products);
+
+console.log("Most expensive product:", outcome.mostExp.name, "with price", outcome.mostExp.price);
+console.log("Cheapest product:", outcome.leastExp.name, "with price", outcome.leastExp.price);
 
 //13. given an array of prices x, and a range from y to z, find the prices that fall within that specified range.
 
