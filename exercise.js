@@ -116,7 +116,8 @@ let shoppingcart = {
   markers: 5,
 };
 
-for (let item in shoppingcart) { //let item in shoppingcart  iterates over each key in the shoppingcart object. In this case, item will take the values "pens", "pencils", "notebooks", "erasers", and "markers" in each iteration.
+for (let item in shoppingcart) {
+  //let item in shoppingcart  iterates over each key in the shoppingcart object. In this case, item will take the values "pens", "pencils", "notebooks", "erasers", and "markers" in each iteration.
   if (shoppingcart[item] > 0) {
     console.log(item + ": " + shoppingcart[item]);
   } else {
@@ -142,8 +143,9 @@ for (
     lowestPrice = prices[i];
   } //this checks if the current price is less than the lowestPrice found so far. If it is, it updates lowestPrice to the current price.
 }
-console.log("Highest price: " + highestPrice + " and Lowest price: " + lowestPrice);
-
+console.log(
+  "Highest price: " + highestPrice + " and Lowest price: " + lowestPrice,
+);
 
 // 11. using bubble sort to find highest and lowest prices
 
@@ -173,56 +175,46 @@ function bubbleSortDescending(arr) {
   return arr;
 }
 
-
 let charges = [230, 150, 400, 320, 90, 600];
 bubbleSortDescending(charges);
 console.log("Sorted charges (highest to lowest):", charges);
-console.log("highest charge is "+ charges[0] + " and the lowest charge is "+ charges[charges.length - 1] )
+console.log(
+  "highest charge is " +
+    charges[0] +
+    " and the lowest charge is " +
+    charges[charges.length - 1],
+);
 
 //bubble sort (ascending order)
 
-function bubbleSortAscending(array) {
-  let 
+function bubbleSortAscending(arr) {
+  let n = arr.length;
+
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
 }
+
+let costs = [680, 450, 1200, 300, 150, 900];
+bubbleSortAscending(costs);
+console.log("Sorted costs (lowest to highest):", costs);
+console.log(
+  "lowest cost is " +
+    costs[0] +
+    " and the highest cost is " +
+    costs[costs.length - 1],
+);
 
 //12. write a js program that prints the name and price of the most expensive and cheapest item
 
-let products = {
-  phonecase: 250,
-  waterbottle: 700,
-  lemontea: 150,
-  notebook: 420,
-  shoes: 1170,
-  giftbag: 50,
-};
 
-let mostexpprod = products.phonecase;
-let cheapestprod = products.phonecase;
-
-for (let item in products) {
-  if (products[item] > mostexpprod) {
-    mostexpprod = products[item];
-  }
-  if (products[item] < cheapestprod) {
-    cheapestprod = products[item];
-  }
-}
-
-
-//- for...in loop → This type of loop is designed to go through all the keys (property names) of an object.
-
-//to return both name and price in one loop
-
-for (let item in products) {
-  if (products[item] === mostexpprod) {
-    console.log(
-      "Most expensive product: " + item + " with price " + products[item],
-    );
-  }
-  if (products[item] === cheapestprod) {
-    console.log("Cheapest product: " + item + " with price " + products[item]);
-  }
-}
 
 //13. given an array of prices x, and a range from y to z, find the prices that fall within that specified range.
 
